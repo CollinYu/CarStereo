@@ -24,14 +24,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:text="Radio Display"
+                android:text="FM Radio"
                 android:fontFamily="monospace"
                 android:id="@+id/RadioDisplay"
                 android:gravity="center"
                 android:textSize="60dp"
                 android:paddingLeft="50dp"
                 android:paddingRight="50dp"
-                android:textColor="#00ff00" />
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -115,10 +115,10 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="Tuning"
+                android:text="88.1"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:textColor="#00ff00"
+                android:textColor="#000000"
                 android:textSize="30dp"
                 android:id="@+id/Tuning"
                 android:layout_weight="1" />
@@ -144,8 +144,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:id="@+id/seekBar"
-                android:background="#3f3737" />
+                android:id="@+id/TuningBar"
+                android:background="#3f3737"
+                android:progressTint="#00ff00"
+                android:thumbTint="#00FF00" />
         </LinearLayout>
 
     </LinearLayout>
@@ -170,7 +172,7 @@
                 android:id="@+id/CDdrive"
                 android:layout_gravity="center"
                 android:background="#ffffff"
-                android:text="--------------------------------------------------------"
+                android:text=""
                 android:layout_marginLeft="60dp" />
         </LinearLayout>
 
@@ -243,20 +245,35 @@
             android:weightSum="10"
             android:layout_weight="1">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Volume"
+                android:layout_weight="1"
+                android:background="#5F5252"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="26dp"
+                android:textColor="#000000"
+                android:text="Volume: 0" />
+
             <SeekBar
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/VolumeBar"
-                android:layout_weight="9"
-                android:background="#5f5252" />
+                android:layout_weight="8"
+                android:background="#5f5252"
+                android:progressTint="#00ff00"
+                android:thumbTint="#00FF00" />
 
-            <Button
+            <ImageButton
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/powerButton"
                 android:text="Power"
                 android:background="#5f5252"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:src="@drawable/power_buttonoff" />
+
         </LinearLayout>
 
     </LinearLayout>
